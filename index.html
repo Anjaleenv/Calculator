@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="flex items-center justify-center h-screen bg-pink-200 rounded py-1">
+
+  <div class="bg-white p-6 rounded-[15px] max-w-[500px] overflow-hidden shadow-lg w-72 font-sans">
+
+    <!-- Title added here -->
+    <h1 class="text-center text-2xl font-bold mb-4 text-pink-600 select-none">
+       Anjalee's Calculator
+    </h1>
+
+    <input
+      type="text"
+      id="display"
+      readonly
+      class="w-full text-2xl font-mono mb-4 p-2 rounded border-pink-300"
+      placeholder="0"
+    />
+
+    <div class="grid grid-cols-4 gap-2" style="padding: 25px;">
+ <button class="bg-pink-200 hover:bg-pink-300 rounded-lg py-2 font-semibold shadow" onclick="clearDisplay()">C</button>
+        <button class="bg-pink-200 hover:bg-pink-300 rounded-lg py-2 font-semibold shadow" onclick="appendToDisplay('%')">%</button>
+        <button class="bg-pink-200 hover:bg-pink-300 rounded-lg py-2 font-semibold shadow" onclick="appendToDisplay('/')">/</button>
+        <button class="bg-pink-400 hover:bg-pink-500 text-white rounded-lg py-2 font-semibold shadow" onclick="deleteLast()">⌫</button>
+
+  <button class="bg-pink-200 hover:bg-pink-300 rounded-lg py-2 font-semibold shadow" onclick="appendToDisplay('7')">7</button>
+        <button class="bg-pink-200 hover:bg-pink-300 rounded-lg py-2 font-semibold shadow" onclick="appendToDisplay('8')">8</button>
+        <button class="bg-pink-200 hover:bg-pink-300 rounded-lg py-2 font-semibold shadow" onclick="appendToDisplay('9')">9</button>
+        <button class="bg-pink-200 hover:bg-pink-300 rounded-lg py-2 font-semibold shadow" onclick="appendToDisplay('*')">×</button> 
+
+   <button class="bg-pink-200 hover:bg-pink-300 rounded-lg py-2 font-semibold shadow" onclick="appendToDisplay('4')">4</button>
+        <button class="bg-pink-200 hover:bg-pink-300 rounded-lg py-2 font-semibold shadow" onclick="appendToDisplay('5')">5</button>
+        <button class="bg-pink-200 hover:bg-pink-300 rounded-lg py-2 font-semibold shadow" onclick="appendToDisplay('6')">6</button>
+        <button class="bg-pink-200 hover:bg-pink-300 rounded-lg py-2 font-semibold shadow" onclick="appendToDisplayd('-')">−</button> 
+
+<button class="bg-pink-200 hover:bg-pink-300 rounded-lg py-2 font-semibold shadow" onclick="appendToDisplay('1')">1</button>
+        <button class="bg-pink-200 hover:bg-pink-300 rounded-lg py-2 font-semibold shadow" onclick="appendToDisplay('2')">2</button>
+        <button class="bg-pink-200 hover:bg-pink-300 rounded-lg py-2 font-semibold shadow" onclick="appendToDisplay('3')">3</button>
+        <button class="bg-pink-200 hover:bg-pink-300 rounded-lg py-2 font-semibold shadow" onclick="appendToDisplay('+')">+</button> 
+
+           <button class="bg-pink-200 hover:bg-pink-300 rounded-lg py-2 font-semibold shadow col-span-2" onclick="appendToDisplay('0')">0</button>
+        <button class="bg-pink-200 hover:bg-pink-300 rounded-lg py-2 font-semibold shadow" onclick="appendToDisplay('.')">.</button>
+        <button class="bg-pink-500 hover:bg-pink-600 text-white rounded-lg py-2 font-semibold shadow" onclick="calculateResult()">=</button>
+      </div>
+<!-- empty space to center 0 -->
+<div></div>
+<!-- <button class="bg-pink-200 hover:bg-pink-300 active:bg-pink-200 rounded py-2 px-4 text-2xl col-span-2" onclick="appendToDisplay('0')">0</button> -->
+<div></div>
+
+
+  <script src="index.js"></script>
+</body>
+</html>
